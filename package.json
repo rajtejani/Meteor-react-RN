@@ -1,0 +1,48 @@
+{
+  "name": "simple-todos-react",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "meteor run || react-native start",
+    "test": "meteor test --once --driver-package meteortesting:mocha && jest",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@meteorrn/core": "^2.1.0",
+    "@react-native-async-storage/async-storage": "^1.14.1",
+    "@react-native-community/netinfo": "^6.0.0",
+    "create-react-class": "^15.7.0",
+    "libphonenumber-js": "^1.9.14",
+    "lodash": "^4.17.21",
+    "meteor-node-stubs": "^1.0.1",
+    "moment-timezone": "^0.5.33",
+    "react": "^16.13.1",
+    "react-addons-pure-render-mixin": "^15.6.3",
+    "react-dom": "^16.13.1",
+    "react-meteor-data": "^0.2.11",
+    "react-native": "^0.63.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.server.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/runtime": "^7.13.10",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.22.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.65.2",
+    "react-test-renderer": "^17.0.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
